@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Hormiga Labs</title>
+  <meta name="description" content="Clear pricing for lab websites: one flat build fee, simple monthly care plans, and a free 1-hour intro call. University procurement friendly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Open+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='8' r='4' fill='%23e9e7db'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23e9e7db'/%3E%3Ccircle cx='16' cy='25' r='5' fill='%23e9e7db'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="7" r="4" fill="currentColor"/>
+          <circle cx="16" cy="15" r="3.2" fill="currentColor"/>
+          <circle cx="16" cy="24.5" r="5" fill="currentColor"/>
+          <path d="M8 9 L13 13 M7 15 L12.8 15 M8 21 L13 17.5 M24 9 L19 13 M25 15 L19.2 15 M24 21 L19 17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Hormiga Labs
+      </a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+        <li><a href="contact.html" class="btn btn-signal btn-sm">Start a project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:24px;">
+      <div class="wrap">
+        <span class="kicker">Pricing</span>
+        <h1 class="display">No mystery.<br /><span class="accent">No lock-in.</span></h1>
+        <p class="lede" style="margin-top:28px;">One flat fee for the website. One simple plan to keep it alive. Everything else is an add-on, not a requirement. Invoices and purchase orders welcome.</p>
+      </div>
+    </section>
+
+    <section class="tight" style="padding-top:24px;">
+      <div class="wrap">
+        <!-- THE BUILD — one-time fee, centered -->
+        <div class="price-hero reveal">
+          <span class="tag">One-time fee</span>
+          <h3>The Website</h3>
+          <p class="price">$1,499</p>
+          <p class="price-note">4–6 weeks · you own everything · no subscription required</p>
+          <ul>
+            <li>Multiple design directions to choose from</li>
+            <li>3 rounds of revisions</li>
+            <li>Custom site — never a template</li>
+            <li>Copywriting done for you, with revisions</li>
+            <li>Publications, people &amp; news pages</li>
+            <li>PI bio &amp; press kit</li>
+            <li>SEO &amp; analytics set up</li>
+            <li>First month of care included</li>
+          </ul>
+          <a class="btn btn-signal" href="contact.html">Start your build</a>
+        </div>
+
+        <!-- MONTHLY OPTIONS -->
+        <div class="monthly-head">
+          <h2>Then, if you want us to stick around</h2>
+          <p>Optional monthly hours — pause or cancel anytime.</p>
+          <div class="billing-toggle" role="group" aria-label="Billing period">
+            <button type="button" id="bill-monthly" class="active" aria-pressed="true">Monthly</button>
+            <button type="button" id="bill-annual" aria-pressed="false">Annual <span class="save">save 10%</span></button>
+          </div>
+        </div>
+        <div class="price-monthly">
+          <div class="pillar featured reveal">
+            <span class="flag">Default — included with every build</span>
+            <h3>The Base</h3>
+            <p class="price"><span data-monthly="$99" data-annual="$89">$99</span><span class="per">/mo</span></p>
+            <p class="price-note" data-monthly="1 hour of updates monthly" data-annual="1 hour of updates monthly · billed annually ($1,068/yr)">1 hour of updates monthly</p>
+            <p>Your site, never neglected. The essentials handled so you never think about it.</p>
+            <ul>
+              <li>1 hour of changes every month</li>
+              <li>Hosting, security &amp; uptime handled</li>
+              <li>New paper or roster change? Just email us</li>
+              <li>Monthly backup &amp; site health report</li>
+              <li>Priority email support</li>
+            </ul>
+          </div>
+          <div class="pillar reveal">
+            <span class="tag">Care plan</span>
+            <h3>The Care Plan</h3>
+            <p class="price"><span data-monthly="$299" data-annual="$269">$299</span><span class="per">/mo</span></p>
+            <p class="price-note" data-monthly="up to 5 hours monthly" data-annual="up to 5 hours monthly · billed annually ($3,228/yr)">up to 5 hours monthly</p>
+            <p>Your site never goes stale. New papers, new people, new results — kept current.</p>
+            <ul>
+              <li>Everything in The Base</li>
+              <li><strong>48-hour turnaround</strong> on changes</li>
+              <li>Site updates, edits &amp; fixes</li>
+              <li>New publications &amp; roster changes</li>
+              <li>Ongoing SEO &amp; email setup</li>
+            </ul>
+          </div>
+          <div class="pillar reveal">
+            <span class="tag">Care + growth</span>
+            <h3>Care + Growth</h3>
+            <p class="price"><span data-monthly="$499" data-annual="$449">$499</span><span class="per">/mo</span></p>
+            <p class="price-note" data-monthly="up to 10 hours monthly" data-annual="up to 10 hours monthly · billed annually ($5,388/yr)">up to 10 hours monthly</p>
+            <p>Everything in The Care Plan, plus the optional reach work when you want it.</p>
+            <ul>
+              <li>Everything in The Care Plan</li>
+              <li><strong>24-hour turnaround</strong> on changes</li>
+              <li>Social media consulting</li>
+              <li>Press &amp; media outreach</li>
+              <li>Speaking, podcast &amp; grant support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fine-print">
+          <p><strong>Not sure yet? Schedule a free 1-hour call.</strong> We'll look at your current site together, tell you exactly what we'd change, and you'll leave with useful advice either way — no commitment, no pitch deck. <a href="contact.html" style="color:var(--signal)">Book your call</a>.</p>
+          <p><strong>Additional hours: $99/hr</strong>, billed only with your approval — never a surprise line item.</p>
+          <p><strong>University procurement friendly.</strong> We work with invoices, purchase orders, and grant or startup funds. W-9 on request. Annual prepay (10% off) fits neatly into a single budget line.</p>
+          <p><strong>No lock-in.</strong> Plans are month to month; pause or cancel anytime. You own your domain, your site, and every asset we make.</p>
+          <p><strong>Bigger ambitions?</strong> Documentary/TV pitching, media partnerships, and department-scale engagements are scoped individually — <a href="contact.html" style="color:var(--signal)">tell us what you're after</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDIBILITY -->
+    <section class="band-dark">
+      <div class="wrap">
+        <span class="kicker">Why us</span>
+        <h2 class="section-title">Built at scale.<br />Raised in a lab.</h2>
+        <div class="stats">
+          <div class="stat reveal"><span class="big">8 years</span><span class="label">at Microsoft</span></div>
+          <div class="stat reveal"><span class="big">2.5B+</span><span class="label">views on web experiences shipped</span></div>
+          <div class="stat reveal"><span class="big">1 lab</span><span class="label">raised in — a working research lab</span></div>
+        </div>
+        <p class="lede" style="margin-top:36px;">Eight years designing and shipping web experiences at Microsoft that have been viewed over 2.5 billion times — brought home to the community that raised us: working scientists.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Ready for<br /><span style="color:var(--signal)">a better site?</span></h2>
+        <a class="btn" href="contact.html">Start your build</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo" href="index.html">Hormiga Labs</a>
+        <p style="margin-top:14px; max-width:34ch; color:rgba(243,239,230,0.6); font-size:14px;">We build websites for science labs. Washington, DC.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@hormigalabs.com">hello@hormigalabs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 Hormiga Labs</span>
+      <span>FORMICIDAE / EST. 2026</span>
+    </div>
+  </footer>
+
+  <script src="assets/ants.js"></script>
+  <script>
+    (function () {
+      const mBtn = document.getElementById("bill-monthly");
+      const aBtn = document.getElementById("bill-annual");
+      function setMode(annual) {
+        mBtn.classList.toggle("active", !annual);
+        aBtn.classList.toggle("active", annual);
+        mBtn.setAttribute("aria-pressed", String(!annual));
+        aBtn.setAttribute("aria-pressed", String(annual));
+        document.querySelectorAll("[data-monthly]").forEach((el) => {
+          el.textContent = annual ? el.dataset.annual : el.dataset.monthly;
+        });
+      }
+      mBtn.addEventListener("click", () => setMode(false));
+      aBtn.addEventListener("click", () => setMode(true));
+    })();
+  </script>
+</body>
+</html>
