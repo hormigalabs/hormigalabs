@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Hormiga Labs</title>
+  <meta name="description" content="Start a project with Hormiga Labs. Lab websites, care plans, and a free 1-hour intro call for scientists and labs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Open+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='8' r='4' fill='%23e9e7db'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23e9e7db'/%3E%3Ccircle cx='16' cy='25' r='5' fill='%23e9e7db'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="7" r="4" fill="currentColor"/>
+          <circle cx="16" cy="15" r="3.2" fill="currentColor"/>
+          <circle cx="16" cy="24.5" r="5" fill="currentColor"/>
+          <path d="M8 9 L13 13 M7 15 L12.8 15 M8 21 L13 17.5 M24 9 L19 13 M25 15 L19.2 15 M24 21 L19 17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Hormiga Labs
+      </a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html" class="btn btn-signal btn-sm" aria-current="page">Start a project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:24px;">
+      <div class="wrap">
+        <span class="kicker">Contact</span>
+        <h1 class="display">Send the<br /><span class="accent">signal.</span></h1>
+        <p class="lede" style="margin-top:28px;">Tell us about your lab and what you want the world to see. We reply within two working days — usually faster.</p>
+      </div>
+    </section>
+
+    <section class="tight" style="padding-bottom:96px;">
+      <div class="wrap two-col">
+        <div class="contact-card">
+          <!-- FORM SETUP: create a free form at https://formspree.io, then
+               replace YOUR_FORM_ID below with the ID Formspree gives you.
+               Until then, the email link on the right works out of the box. -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-grid">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" required placeholder="Dr. Jane Rivera" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required placeholder="you@university.edu" />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" name="phone" placeholder="(202) 555-0123" />
+            </div>
+            <div>
+              <label for="callback">Desired callback time</label>
+              <input id="callback" type="text" name="callback_time" placeholder="e.g. weekday afternoons ET, or 'email is fine'" />
+            </div>
+            <div>
+              <label for="org">Lab / Institution</label>
+              <input id="org" type="text" name="organization" placeholder="Rivera Lab, University of —" />
+            </div>
+            <div>
+              <label for="interest">I'm interested in</label>
+              <select id="interest" name="interest">
+                <option>New lab website</option>
+                <option>Website redesign / rebuild</option>
+                <option>Monthly care plan</option>
+                <option>Free 1-hour intro call</option>
+                <option>Add-ons: media, social, grants</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">What should the world know about your work?</label>
+              <textarea id="message" name="message" rows="5" placeholder="Two sentences is plenty."></textarea>
+            </div>
+            <button class="btn btn-signal" type="submit">Send it</button>
+          </form>
+        </div>
+        <div>
+          <span class="kicker">Prefer email?</span>
+          <h2 class="section-title" style="font-size:clamp(26px,3.5vw,40px);">hello@<br />hormigalabs.com</h2>
+          <p class="muted">Include your lab page (even the old one — especially the old one) and one thing you wish more people knew about your research.</p>
+          <a class="btn btn-ghost" style="margin-top:24px" href="mailto:hello@hormigalabs.com?subject=Intro%20call%20—%20%5BYour%20Lab%5D">Email us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo" href="index.html">Hormiga Labs</a>
+        <p style="margin-top:14px; max-width:34ch; color:rgba(243,239,230,0.6); font-size:14px;">We build websites for science labs. Washington, DC.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@hormigalabs.com">hello@hormigalabs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 Hormiga Labs</span>
+      <span>FORMICIDAE / EST. 2026</span>
+    </div>
+  </footer>
+
+  <script src="assets/ants.js"></script>
+</body>
+</html>
