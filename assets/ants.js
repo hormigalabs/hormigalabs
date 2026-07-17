@@ -143,11 +143,11 @@
     btn.className = "ant-switch";
     btn.type = "button";
     btn.innerHTML =
-      '<svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true">' +
-      '<circle cx="16" cy="7" r="4" fill="currentColor"/>' +
-      '<circle cx="16" cy="15" r="3.2" fill="currentColor"/>' +
-      '<circle cx="16" cy="24.5" r="5" fill="currentColor"/>' +
-      '<path d="M8 12 L13 14 M8 20 L13 17 M24 12 L19 14 M24 20 L19 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>' +
+      '<svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true" fill="none">' +
+      '<path d="M14 12.5 Q9.5 10.5 6.5 7.5 M18 12.5 Q22.5 10.5 25.5 7.5 M13.5 15 Q8.5 15.5 5 18 M18.5 15 Q23.5 15.5 27 18 M14 17.5 Q10 21.5 7.5 26 M18 17.5 Q22 21.5 24.5 26" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>' +
+      '<circle cx="16" cy="7.5" r="3.8" fill="currentColor"/>' +
+      '<ellipse cx="16" cy="15" rx="3" ry="4.2" fill="currentColor"/>' +
+      '<ellipse cx="16" cy="24.5" rx="4.8" ry="5.6" fill="currentColor"/>' +
       "</svg>";
     function syncBtn() {
       btn.setAttribute("aria-pressed", String(enabled));
