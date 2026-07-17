@@ -39,7 +39,7 @@ body {
   z-index: 0;
   pointer-events: none;
 }
-main, header.site-header, footer.site-footer { position: relative; z-index: 1; }
+main, footer.site-footer { position: relative; z-index: 1; }
 
 ::selection { background: var(--signal); color: var(--bone); }
 
@@ -78,7 +78,7 @@ h2.section-title {
 .muted { color: var(--grey); }
 
 /* ---------- header ---------- */
-.site-header {
+header.site-header {
   position: sticky; top: 0; z-index: 50;
   background: color-mix(in srgb, var(--bone) 88%, transparent);
   backdrop-filter: blur(10px);
