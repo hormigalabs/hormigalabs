@@ -136,9 +136,9 @@
   }
 
   /* ---- nav toggle button ---- */
-  const navLinks = document.querySelector(".nav-links");
-  if (navLinks && !reduced) {
-    const li = document.createElement("li");
+  const nav = document.querySelector(".nav");
+  const navToggle = document.querySelector(".nav-toggle");
+  if (nav && !reduced) {
     const btn = document.createElement("button");
     btn.className = "ant-switch";
     btn.type = "button";
@@ -162,8 +162,18 @@
       updateVisibility();
     });
     syncBtn();
-    li.appendChild(btn);
-    navLinks.insertBefore(li, navLinks.lastElementChild); // before the CTA button
+    if (navToggle) nav.insertBefore(btn, navToggle);
+    else nav.appendChild(btn);
+  }
+
+  if (!/contact/i.test(location.pathname)) {
+    const fab = document.createElement("a");
+    fab.className = "contact-fab";
+    fab.href = "contact.html";
+    fab.setAttribute("aria-label", "Contact us");
+    fab.title = "Start a project";
+    fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>';
+    document.body.appendChild(fab);
   }
 
   updateVisibility();
