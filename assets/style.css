@@ -85,14 +85,18 @@ header.site-header {
   border-bottom: 1px solid var(--line);
 }
 .nav {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; gap: 14px;
   padding: 14px 40px; max-width: none;
 }
 .logo {
   font-family: var(--font-display); font-weight: 800;
   font-size: 21px; letter-spacing: 0.01em;
   text-decoration: none; display: flex; align-items: center; gap: 10px;
+  margin-right: auto;
 }
+.nav-links { order: 1; }
+.ant-switch { order: 2; }
+.nav-toggle { order: 3; }
 .logo svg { width: 26px; height: 26px; }
 .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
 .nav-links a {
@@ -128,8 +132,21 @@ header.site-header {
 .ant-switch.off { color: var(--grey); border-color: var(--grey); opacity: 0.55; }
 .ant-switch.off:hover { background: var(--grey); color: var(--bone); }
 
+/* persistent contact button */
+.contact-fab {
+  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--signal); color: var(--bone);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.42); text-decoration: none;
+  transition: transform 0.15s, background 0.15s;
+}
+.contact-fab:hover { transform: translateY(-3px); background: var(--ink); color: var(--bone); }
+.contact-fab svg { width: 24px; height: 24px; }
+@media (prefers-reduced-motion: reduce) { .contact-fab { transition: none; } }
+
 /* mobile nav */
-.nav-toggle { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; }
+.nav-toggle { display: none; background: none; border: 0; font-size: 26px; cursor: pointer; color: var(--ink); line-height: 1; padding: 0 2px; }
 @media (max-width: 760px) {
   .nav-toggle { display: block; }
   .nav-links {
