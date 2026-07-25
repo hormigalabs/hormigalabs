@@ -47,10 +47,9 @@
     <section class="tight" style="padding-bottom:96px;">
       <div class="wrap two-col">
         <div class="contact-card">
-          <!-- FORM SETUP: create a free form at https://formspree.io, then
-               replace YOUR_FORM_ID below with the ID Formspree gives you.
-               Until then, the email link on the right works out of the box. -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-grid">
+          <!-- Submissions POST to the Cloudflare Worker (hormiga-form), which relays to Resend. -->
+          <form id="contactForm" class="form-grid" novalidate>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div>
               <label for="name">Name</label>
               <input id="name" type="text" name="name" required placeholder="Dr. Jane Rivera" />
@@ -87,6 +86,7 @@
               <textarea id="message" name="message" rows="5" placeholder="Two sentences is plenty."></textarea>
             </div>
             <button class="btn btn-signal" type="submit">Send it</button>
+            <p id="formMsg" role="status" aria-live="polite" style="margin-top:6px; font-size:14px; color:var(--signal);"></p>
           </form>
         </div>
         <div>
@@ -128,5 +128,49 @@
   </footer>
 
   <script src="assets/ants.js"></script>
+  <script>
+    (function () {
+      var f = document.getElementById("contactForm");
+      var msg = document.getElementById("formMsg");
+      if (!f) return;
+      var ENDPOINT = "https://hormiga-form.mute-bonus-3e90.workers.dev/";
+      f.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        var btn = f.querySelector('button[type="submit"]');
+        if (!f.name.value || !f.email.value) {
+          msg.style.color = "var(--signal)";
+          msg.textContent = "Please add your name and email.";
+          return;
+        }
+        var data = {};
+        new FormData(f).forEach(function (v, k) { data[k] = v; });
+        btn.disabled = true;
+        var original = btn.textContent;
+        btn.textContent = "Sending…";
+        msg.textContent = "";
+        try {
+          var r = await fetch(ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+          var j = {};
+          try { j = await r.json(); } catch (_) {}
+          if (r.ok && j.ok) {
+            f.innerHTML =
+              '<p style="font-family:var(--font-display);font-size:22px;color:var(--ink);margin:0 0 10px;">Thanks — your message is on its way.</p>' +
+              '<p style="color:var(--grey);font-size:15px;margin:0;">We’ll be in touch within two working days. For anything urgent, email hello@hormigalabs.com.</p>';
+          } else {
+            throw new Error((j && j.error) || ("HTTP " + r.status));
+          }
+        } catch (err) {
+          btn.disabled = false;
+          btn.textContent = original;
+          msg.style.color = "#e0a58a";
+          msg.textContent = "Sorry — something went wrong. Please email hello@hormigalabs.com directly.";
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
